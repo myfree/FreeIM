@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:beyole="http://schemas.android.com/apk/res/com.ykhuo.im"  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <com.ykhuo.im.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:orientation="horizontal"
+       android:background="#ffffff" >
+
+       <com.ykhuo.im.view.CircleImage
+           android:id="@+id/header_img"
+           android:layout_width="80dip"
+           android:layout_height="80dip"
+           android:layout_marginLeft="25dp"
+           android:layout_marginRight="25dp"
+           android:layout_gravity="center_vertical"
+           beyole:borderRadius="40dip"  
+           beyole:imageType="round"
+           android:background="@drawable/circle"
+           android:src="@drawable/channel_qq" />
+
+       <TextView
+           android:id="@+id/me_uname"
+           android:textSize="36dp"
+           android:layout_marginLeft="50dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+           android:text="TextView" />
+       
+   </LinearLayout>
+
+   <ListView
+       android:id="@+id/mesetting"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="2dp"
+       android:textSize="28dp"
+       android:background="#ffffff" >
+   </ListView>
+
+</LinearLayout>

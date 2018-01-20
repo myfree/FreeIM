@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ykhuo.im.view.FaceRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FaceRelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/cb0ChatLayoutMsg"
+        android:layout_width="fill_parent"
+      	android:layout_height="wrap_content"
+        android:background="@drawable/bg_chatbar_textmode"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/chat_btn_voice"
+            android:layout_width="0dp"
+            android:layout_height="46dip"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_publish_voice" />
+
+        <EditText
+            android:id="@+id/chat_edit_input"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="5"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edittext_sendmsg"
+            android:gravity="center_vertical"
+            android:imeOptions="flagNoExtractUi"
+            android:maxHeight="120dip"
+            android:maxLength="4000"
+            android:minHeight="46dip"
+            android:paddingTop="3dip" />
+        
+        <com.ykhuo.im.view.AudioRecorderButton
+            android:id="@+id/id_recorder_button"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="5"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:minHeight="46dp"
+            android:visibility="gone"
+            android:background="@drawable/btn_recorder_normal"
+            android:text="@string/str_recorder_normal"
+            android:textColor="#727272">
+        </com.ykhuo.im.view.AudioRecorderButton>
+		
+        <ImageButton
+            android:id="@+id/chat_btn_emote"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="4dp"
+			android:layout_marginRight="4dp"
+			android:layout_weight="1"
+			android:minWidth="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_chat_emote_normal" />
+        
+        <Button
+            android:id="@+id/chat_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="46dip"
+            android:layout_weight="1"
+            android:minWidth="48dp"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/btn_chatbtn2"
+            android:text="发送"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+        
+        <ImageButton
+            android:id="@+id/chat_btn_jia"
+            android:layout_width="0dp"
+            android:layout_height="46dip"
+            android:minWidth="48dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_jiahao"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatSetting"
+        android:layout_width="fill_parent"
+      	android:layout_height="50dp"
+      	android:layout_below="@id/cb0ChatLayoutMsg"
+      	android:layout_marginBottom="1dp"
+      	android:visibility="gone"
+        android:background="@drawable/bg_chatbar_textmode"
+        android:orientation="horizontal" >
+		
+        <ImageButton
+            android:id="@+id/chat_btn_zhaoxiang"
+            android:layout_width="0dp"
+            android:layout_height="36dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_zhaoxiang"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+        
+        <ImageButton
+            android:id="@+id/chat_btn_img"
+            android:layout_width="0dp"
+            android:layout_height="36dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_images"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+        
+        <ImageButton
+            android:id="@+id/chat_btn_file"
+            android:layout_width="0dp"
+            android:layout_height="36dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_file"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+        
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_facechoose"
+        android:layout_width="fill_parent"
+        android:layout_height="124dip"
+        android:layout_below="@id/chatSetting"
+        android:background="#f6f5f5"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_contains"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.ykhuo.im.view.FaceRelativeLayout>

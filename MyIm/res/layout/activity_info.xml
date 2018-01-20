@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ykhuo="http://schemas.android.com/apk/res/com.ykhuo.im"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ykhuo.im.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/myphoto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_default_avatar" />
+    
+    <com.ykhuo.im.view.LineView
+        android:id="@+id/myusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ykhuo:titleValue="账号"
+        ykhuo:contextValue="1000"/>
+    
+    <com.ykhuo.im.view.LineView 
+        android:id="@+id/mynickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ykhuo:titleValue="昵称"
+        ykhuo:contextValue="free"/>
+	
+    <com.ykhuo.im.view.LineView 
+        android:id="@+id/mysex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ykhuo:titleValue="性别"
+        ykhuo:contextValue="男"/>
+    
+    <com.ykhuo.im.view.LineView 
+        android:id="@+id/mybirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ykhuo:titleValue="年龄"
+        ykhuo:contextValue="2017-12-29"/>
+
+    
+
+</LinearLayout>

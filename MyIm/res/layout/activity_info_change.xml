@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ykhuo="http://schemas.android.com/apk/res/com.ykhuo.im"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ykhuo.im.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/ChangeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <ToggleButton
+        android:id="@+id/mysex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="男"
+		android:textOff="女"
+		android:layout_gravity="center_horizontal"
+        android:text="ToggleButton" />
+    
+    <DatePicker  
+        android:id="@+id/birthdaydate"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false" />
+
+
+
+</LinearLayout>
